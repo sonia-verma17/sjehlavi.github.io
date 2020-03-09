@@ -1,0 +1,47 @@
+
+
+
+
+ <!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <div class="header">
+    <h3 class="toolbar-actions">Owner-Account</h3>
+    <div class="spacer"></div>
+    <h3 class="toolbar-actions">Owner Actions</h3>
+    <h3 class=toolbar-actions>Account Actions</h3>
+  </div>
+</div>
+
+<div class="content" role="main">
+  <mat-table [dataSource]="myDataArray">
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let accountName">{{accountName.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Date of Birth">
+      <mat-header-cell *matHeaderCellDef>Date of Birth</mat-header-cell>
+      <mat-cell *matCellDef="let accountBirth">{{accountBirth.dob}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Address">
+      <mat-header-cell *matHeaderCellDef>Address</mat-header-cell>
+      <mat-cell *matCellDef="let accountAddress">{{accountAddress.address}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Details">
+      <mat-header-cell *matHeaderCellDef>Details</mat-header-cell>
+      <mat-cell *matCellDef="let accountDetails"><img [src]="accountDetails.details" width="20px" height="20px" /></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Update">
+      <mat-header-cell *matHeaderCellDef>Update</mat-header-cell>
+      <mat-cell *matCellDef="let accountUpdate"><img (click)="updateRow(accountUpdate.id)" [src]="accountUpdate.update" width="20px" height="20px" /></mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Delete">
+      <mat-header-cell *matHeaderCellDef>Delete</mat-header-cell>
+      <mat-cell *matCellDef="let accountDelete"><img (click)="deleteRow(accountDelete.id)" [src]="accountDelete.delete" width="20px" height="20px" /></mat-cell>
+    </ng-container>
+  <mat-header-row *matHeaderRowDef="tableColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: tableColumns"></mat-row>
+  </mat-table>
+</div>
+
+
+

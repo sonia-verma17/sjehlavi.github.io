@@ -1,0 +1,39 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+/* @import "~@angular/material/prebuilt-themes/pink-bluegrey.css"; */
+/* @import "~@angular/material/prebuilt-themes/purple-green.css"; */
+
+.header {
+  height: 10%;
+  background-color: #3440eb;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.main {
+  height: 90%;
+  background-color: #EEF2F5;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.images {
+  height: 22px;
+  width: 22px;
+}
+
+.content-table {
+  padding-top: 50px;
+}
+
+.toolbar-actions {
+  padding: 15px
+}
